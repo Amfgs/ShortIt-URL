@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encurtador de URL Moderno</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Bem-vindo ao <span>ShortIt</span>! </h1>
+        <p>Insira uma URL longa abaixo para criar um link curto e elegante.</p>
+        
+        <div class="input-group">
+            <input type="text" id="urlInput" placeholder="https://exemplo.com.br/sua-url-muito-longa">
+            <button onclick="encurtarURL()">Encurtar</button>
+        </div>
+
+        <div id="resultado" class="hidden">
+            <p>Seu link curto está pronto:</p>
+            <a id="linkCurto" href="#" target="_blank"></a>
+        </div>
+    </div>
+
+    <script>
+        async function encurtarURL() {
+            const urlOriginal = document.getElementById('urlInput').value;
+            const res = await fetch('/encurtar', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ url: urlOriginal })
+            });
+
+            const dados = await res.json();
+            
+            if (dados.urlEncurtada) {
+                const resultadoDiv = document.getElementById('resultado');
+                const linkElement = document.getElementById('linkCurto');
+                
+                linkElement.href = dados.urlEncurtada;
+                linkElement.innerText = dados.urlEncurtada;
+                resultadoDiv.classList.remove('hidden');
+            }
+        }
+    </script>
+</body>
+</html>
