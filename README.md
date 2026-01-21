@@ -25,7 +25,7 @@ Antes de começar, vais precisar de ter instalado na tua máquina o **Node.js**.
 
 1.  **Clone o repositório:**
     ```bash
-    git clone [https://github.com/seu-usuario/seu-repositorio.git](https://github.com/seu-usuario/seu-repositorio.git)
+    git clone [https://github.com/Amfgs/ShortIt-URL.git](https://github.com/Amfgs/ShortIt-URL.git)
     ```
 
 2.  **Entre na pasta do projeto:**
@@ -51,7 +51,6 @@ Antes de começar, vais precisar de ter instalado na tua máquina o **Node.js**.
 ```text
 .
 ├── public/           # Front-end: HTML e CSS
-├── database.db       # Banco de dados SQLite (gerado na primeira execução)
 ├── index.js          # Back-end: Servidor, Rotas e Lógica de Banco
 ├── package.json      # Manifesto do projeto e dependências
 └── README.md         # Documentação completa do projeto
