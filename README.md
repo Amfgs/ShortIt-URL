@@ -1,4 +1,4 @@
-#  ShortIt - Encurtador de URLs Moderno
+#  ShortIt - Encurtador de URLs
 
 O **ShortIt** é uma aplicação Full Stack desenvolvida em **Node.js** para facilitar o compartilhamento de links longos, transformando-os em URLs curtas e amigáveis. Este projeto demonstra conceitos fundamentais de desenvolvimento backend, como APIs REST, manipulação de arquivos estáticos e utilização de banco de dados em memória.
 Funcionando ainda em ambiente de desenvolvimento, mas, caso necessário, irá para o ambiente de produção.
